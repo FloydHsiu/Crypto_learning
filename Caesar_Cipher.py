@@ -19,7 +19,7 @@ def Decrypt(key, p):
                         return (chr(result))
         else:
                 return p
-
+ 
 #ord(p): a function which can change str to unicode(number)
 #chr(result): a function which can change unicode(number) to str
 
