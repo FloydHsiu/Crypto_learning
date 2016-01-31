@@ -1,6 +1,5 @@
-import tkinter as tk
-from tkinter import filedialog 
 
+#Vigenere Cipher - Shift and polyalphabetic cipher
 # key is a word, ex: "ABC"
 def Encrypt(key, plain):
 	count = 0
@@ -30,12 +29,11 @@ def Decrypt(key, cipher):
 			count = (count+1)%key_len
 	return plain
 
-root = tk.Tk()
-root.withdraw()
-file_path = filedialog.askopenfilename()
-
-f = open(file_path, "r")
-plain_text = f.read()
-print ("Please input the key")
+print ('Please input the text you want to encrypt:')
+plain = input()
+print ('Please input your key')
 key = input()
-print (Encrypt(key, plain_text))
+cipher = Encrypt(key, plain)
+print (cipher)
+
+print ('Try Decrypt:' + Decrypt(key, cipher))
