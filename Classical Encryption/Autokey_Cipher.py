@@ -1,5 +1,4 @@
-import tkinter as tk
-from tkinter import filedialog
+#Autokey Cipher - Shift and polyalphabetic cipher
 
 def Encrypt(key, plain):
 	count = 0
@@ -40,9 +39,11 @@ def Decrypt(key, cipher):
 	return plain
 
 
-root = tk.Tk()
-root.withdraw()
-#file_path = filedialog.askopenfilename()
+print ('Please input the text you want to encrypt:')
+plain = input()
+print ('Please input your key')
+key = input()
+cipher = Encrypt(key, plain)
+print (cipher)
 
-#f = open(file_path, 'r')
-print( Encrypt('deceptive', 'wearediscoveredsaveyourself') )
+print ('Try Decrypt:' + Decrypt(key, cipher))
