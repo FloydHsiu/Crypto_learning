@@ -13,7 +13,7 @@ def Encrypt(key, plain):
                         cipher = cipher + p
         return cipher
 	
-def Decrypt(key, p):
+def Decrypt(key, plain):
         cipher = ''
         for p in plain:
                 if p.isalpha():
@@ -36,7 +36,9 @@ print ("input the key:")
 k = input()
 if k.isdecimal():
         key = int(k)
-        print (Encrypt(key, p))
+        cipher = Encrypt(key, p)
+        print (cipher)
+        print ('Try Decrypt:' + Decrypt(key, cipher))
 else:
         print("You enter wrong key!")
 
